@@ -1,30 +1,64 @@
+<div class="row">
+  <div class="col-8 m-auto">
+    <form [formGroup]="formGroupFornecedor">
+      <div class="display-6 text-center">
+        Cadastro de clientes
+      </div>
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Nome</label>
+        <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome aqui:">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email aqui">
+      </div>
+
+      <div class="mb-3">
+        <label for="cpf" class="form-label">CPF</label>
+        <input type="text" formControlName="cpf" class="form-control" id="cpf" placeholder="Digite seu cpf:">
+      </div>
+      
+      <div class="mb-3">
+        <label for="cnpj" class="form-label">CNPJ</label>
+        <input type="text" formControlName="cnpj" class="form-control" id="cnpj" placeholder="Digite seu cnpj:">
+      </div>
+
+      <div class="mb-3">
+        <label for="loja" class="form-label">Loja</label>
+        <input type="text" formControlName="loja" class="form-control" id="loja" placeholder="Digite o nome de sua loja">
+      </div>
+      
+      <div class="mb-3">
+        <button class="btn btn-primary justify-content-end" (click)="SalvarFornecedor()">salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <table class="table table-dark">
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">CPF</th>
+        <th scope="col">CNPJ</th>
+        <th scope="col">Loja</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let fornecedores of fornecedores">
+        <th scope="row">{{fornecedores.id}}</th>
+        <td>{{fornecedores.name}}</td>
+        <td>{{fornecedores.email}}</td>
+        <td>{{fornecedores.cpf}}</td>
+        <td>{{fornecedores.cnpj}}</td>
+        <td>{{fornecedores.loja}}</td>
+        <td>
+        <button class="btn btn-primary" (click)="EditarFornecedor(fornecedores)">Editar</button>
+        <button class="btn btn-primary" (click)="ExcluirFornecedor(fornecedores)">Excluir</button>
+      </td>
       </tr>
     </tbody>
   </table>

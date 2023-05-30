@@ -1,8 +1,32 @@
 {
-    "clientes" : [
-        {"id": 1, "name": "Pedro", "emai": "Pedro192@gmail.com", "cpf": "123.321.465.98", "endereco": "São Paulo"},
-        {"id": 2, "name": "Leandro", "emai": "Leandro12345@gmail.com", "cpf": "126.331.425.93", "endereco": "Manaus"},
-        {"id": 3, "name": "Julia", "emai": "Julia34567@gmail.com", "cpf": "143.322.475.97", "endereco": "Alagoas"}
-   
-    ]
+  "clientes": [
+    {
+      "id": 1,
+      "name": "Pedro",
+      "emai": "Pedro192@gmail.com",
+      "cpf": "123.321.465.98",
+      "endereco": "São Paulo"
+    },
+    {
+      "id": 2,
+      "name": "Leandro",
+      "emai": "Leandro12345@gmail.com",
+      "cpf": "126.331.425.93",
+      "endereco": "Manaus"
+    },
+    {
+      "id": 3,
+      "name": "Julia",
+      "emai": "Julia34567@gmail.com",
+      "cpf": "143.322.475.97",
+      "endereco": "Alagoas"
+    },
+    {
+      "id": 4,
+      "name": "Vinicius 2",
+      "email": "agnaldo.sbc@gmail.com",
+      "cpf": "2321412412412412",
+      "endereco": "Rua Simphoriano Martinez"
+    }
+  ]
 }
