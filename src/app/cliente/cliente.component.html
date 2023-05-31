@@ -20,15 +20,93 @@
       </div>
 
       <div class="mb-3">
-        <label for="endereco" class="form-label">Endereço</label>
-        <input type="text" formControlName="endereco" class="form-control" id="endereco" placeholder="Digite seu endereço">
+        <label for="estado">Diga seu estado</label>
+        <select id="estado" formControlName="estado" class="form-control">
+          <option value="">Selecione um estado</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
       </div>
-      
+
+      <div class="form-group">
+        <label>pagamento:</label>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" formControlName="pagamento" value="Crédito">
+            Cartão de Crédito
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" formControlName="pagamento" value="Débito">
+            Cartão de Débito
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" formControlName="pagamento" value="Transferência">
+            Transferência Bancária
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" formControlName="pagamento" value="Boleto">
+            Boleto
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" formControlName="pagamento" value="Paypal">
+            Paypal
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" formControlName="pagamento" value="Criptomoeda">
+            Criptomoeda
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Como deseja receber seu pedido</label>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" id="Pedido" formControlName="Pedido" class="form-check-input">
+          <label for="Pedido" class="form-check-label">Você aceita as condições de pagamento?</label>
+        </div>
+      </div>
       <div class="mb-3">
         <button class="btn btn-primary justify-content-end" (click)="SalvarCliente()">salvar</button>
       </div>
     </form>
   </div>
+  
 </div>
 
 
@@ -40,7 +118,9 @@
       <th scope="col">Nome</th>
       <th scope="col">Email</th>
       <th scope="col">CPF</th>
-      <th scope="col">Endereço</th>
+      <th scope="col">Estado</th>
+      <th scope="col">pagamento</th>
+      <th scope="col">Recebimento</th>
     </tr>
   </thead>
   <tbody>
@@ -49,7 +129,9 @@
       <td>{{cliente.name}}</td>
       <td>{{cliente.email}}</td>
       <td>{{cliente.cpf}}</td>
-      <td>{{cliente.endereco}}</td>
+      <td>{{cliente.estado}}</td>
+      <td>{{cliente.pagamento}}</td>
+      <td>{{ cliente.Pedido ? 'Aceito' : 'Não aceito' }}</td>
       <td>
         <button class="btn btn-primary" (click)="EditarCliente(cliente)">Editar</button>
         <button class="btn btn-primary" (click)="ExcluirCliente(cliente)">Excluir</button>

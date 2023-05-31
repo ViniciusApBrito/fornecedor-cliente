@@ -19,7 +19,10 @@ export class ClienteComponent implements OnInit {
       name: [''],
       email: [''],
       cpf: [''],
-      endereco: ['']
+      estado: [''],
+      pagamento:[''],
+      Pedido:['']
+
     });
 
   }
