@@ -41,7 +41,7 @@ export class ClienteComponent implements OnInit {
   SalvarCliente() {
     console.log(this.formGroupClient.value)
     if (this.isEditing) { 
-      this.clienteService.EditarCliente(this.formGroupClient.value).subscribe(
+      this.clienteService.salvarCliente(this.formGroupClient.value).subscribe(
         {
           next: () => {
             this.loadClientes();

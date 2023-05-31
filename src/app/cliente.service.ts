@@ -33,12 +33,11 @@ export class ClienteService {
     return this.http.get<fornecedor[]>(`${this.url}/fornecedores`);
   }
   SalvarFornecedor(Fornecedor: fornecedor): Observable<fornecedor> {
-    return this.http.get<fornecedor>(`${this.url}/fornecedores`);
+    return this.http.post<fornecedor>(`${this.url}/fornecedores`, Fornecedor  );
   }
-  excluirFornecedor(Fornecedor: fornecedor): Observable<void> {
-    return this.http.delete<void>(`${this.url}/fornecedores/${Fornecedor.id}`);
+  excluirFornecedor(Fornecedor: fornecedor): Observable<fornecedor> {
+    return this.http.delete<fornecedor>(`${this.url}/fornecedores/${Fornecedor.id}`);
   }
-
   EditarFornecedor(Fornecedor: fornecedor): Observable<fornecedor> {
     return this.http.put<fornecedor>(`${this.url}/fornecedores/${Fornecedor.id}`, Fornecedor);
   }

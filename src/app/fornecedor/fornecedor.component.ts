@@ -35,7 +35,7 @@ export class FornecedorComponent implements OnInit {
   SalvarFornecedor() {
     console.log(this.formGroupFornecedor.value)
     if (this.isEditing) {
-      this.ClienteService.EditarFornecedor(this.formGroupFornecedor.value).subscribe({
+      this.ClienteService.SalvarFornecedor(this.formGroupFornecedor.value).subscribe({
         next: () => {
           this.loadFornecedores();
           this.formGroupFornecedor.reset();

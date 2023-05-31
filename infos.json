@@ -17,7 +17,41 @@
       "estado": "CE",
       "pagamento": "Criptomoeda",
       "Pedido": null
+    },
+    {
+      "id": 3,
+      "name": "Vinicius 2",
+      "email": "20vender70correr@gmail.com",
+      "cpf": "123.456.789-00",
+      "estado": "PR",
+      "pagamento": "Crédito",
+      "Pedido": true
     }
   ],
-  "fornecedores": []
+  "fornecedores": [
+    {
+      "id": 2,
+      "name": "João da Silva",
+      "email": "20vender70correr@gmail.com",
+      "cpf": "134.846.412-84",
+      "cnpj": "98.765.432/0001-00",
+      "loja": "Supermercado Bom Preço"
+    },
+    {
+      "id": 3,
+      "name": "Pedro Santos",
+      "email": "pedro.santos@example.com",
+      "cpf": "789.123.456-00",
+      "cnpj": "12.345.678/0001-00",
+      "loja": "Loja Fashion Style"
+    },
+    {
+      "id": 5,
+      "name": "Ana Pereira",
+      "email": "ana.pereira@example.com",
+      "cpf": "321.654.987-00",
+      "cnpj": "98.765.432/0001-00",
+      "loja": "Compre e pague"
+    }
+  ]
 }
