@@ -59,8 +59,8 @@ export class FornecedorComponent implements OnInit {
     this.isEditing = true;
   }
 
-  ExcluirFornecedor(fornecedor: fornecedor) {
-    this.ClienteService.EditarFornecedor(fornecedor).subscribe({
+  excluirFornecedor(fornecedor: fornecedor) {
+    this.ClienteService.excluirFornecedor(fornecedor).subscribe({
       next: () => this.loadFornecedores()
     })
   }

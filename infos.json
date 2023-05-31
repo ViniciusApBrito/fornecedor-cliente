@@ -19,30 +19,5 @@
       "Pedido": null
     }
   ],
-  "fornecedores": [
-    {
-      "id": 1,
-      "name": "João Silva",
-      "emai": "joao.silva@gmail.com",
-      "cpf": "111.222.333-44",
-      "cnpj": "",
-      "loja": ""
-    },
-    {
-      "id": 2,
-      "name": "Maria Souza",
-      "emai": "maria.souza@gmail.com",
-      "cpf": "555.666.777-88",
-      "cnpj": "",
-      "loja": ""
-    },
-    {
-      "id": 3,
-      "name": "Carlos Ferreira",
-      "emai": "carlos.ferreira@gmail.com",
-      "cpf": "999.888.777-66",
-      "cnpj": "",
-      "loja": ""
-    }
-  ]
+  "fornecedores": []
 }
