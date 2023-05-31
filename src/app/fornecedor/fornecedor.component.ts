@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { fornecedor } from '../fornecedor';
-import { FornecedorService } from '../fornecedor.service';
-import { Form, FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ClienteService } from '../cliente.service';
 
 @Component({
   selector: 'app-fornecedor',
@@ -12,7 +12,7 @@ export class FornecedorComponent implements OnInit {
   fornecedores: fornecedor[] = [];
   isEditing: boolean = false;
   formGroupFornecedor: FormGroup;
-  constructor(private clienteService: FornecedorService, private formBuilder: FormBuilder) {
+  constructor(private ClienteService: ClienteService, private formBuilder: FormBuilder) {
     this.formGroupFornecedor = formBuilder.group({
       id: [''],
       name: [''],
@@ -27,7 +27,7 @@ export class FornecedorComponent implements OnInit {
     this.loadFornecedores();
   }
   loadFornecedores() {
-    this.clienteService.getfornecedores().subscribe({
+    this.ClienteService.getfornecedores().subscribe({
       next: data => this.fornecedores = data
     });
   }
@@ -35,7 +35,7 @@ export class FornecedorComponent implements OnInit {
   SalvarFornecedor() {
     console.log(this.formGroupFornecedor.value)
     if (this.isEditing) {
-      this.clienteService.EditarFornecedor(this.formGroupFornecedor.value).subscribe({
+      this.ClienteService.EditarFornecedor(this.formGroupFornecedor.value).subscribe({
         next: () => {
           this.loadFornecedores();
           this.formGroupFornecedor.reset();
@@ -45,7 +45,7 @@ export class FornecedorComponent implements OnInit {
       )
     }
     else {
-      this.clienteService.SalvarFornecedor(this.formGroupFornecedor.value).subscribe({
+      this.ClienteService.SalvarFornecedor(this.formGroupFornecedor.value).subscribe({
         next: data => {
           this.fornecedores.push(data);
           this.formGroupFornecedor.reset();
@@ -60,7 +60,7 @@ export class FornecedorComponent implements OnInit {
   }
 
   ExcluirFornecedor(fornecedor: fornecedor) {
-    this.clienteService.EditarFornecedor(fornecedor).subscribe({
+    this.ClienteService.EditarFornecedor(fornecedor).subscribe({
       next: () => this.loadFornecedores()
     })
   }
