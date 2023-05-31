@@ -2,12 +2,21 @@
   "clientes": [
     {
       "id": 1,
-      "name": "Vinicius 2",
-      "email": "",
+      "name": "Julia",
+      "email": "Games@gmail.com",
       "cpf": "2321412412412412",
-      "estado": "AP",
-      "pagamento": "Paypal",
+      "estado": "BA",
+      "pagamento": "Crédito",
       "Pedido": true
+    },
+    {
+      "id": 2,
+      "name": "Wallace",
+      "email": "Cleber@gmail.com",
+      "cpf": "122.456.678.91",
+      "estado": "CE",
+      "pagamento": "Criptomoeda",
+      "Pedido": null
     }
   ],
   "fornecedores": [
